@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | IP Address Tracker</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,15 +17,33 @@
 </head>
 <body>
 
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+  <main>
+    <section class="header-content">
+      <h1 class="title-content">IP Address Tracker</h1>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for any IP address or damain">
+        <span class="input-group-text" id="basic-addon2"><img src="./images/icon-arrow.svg" alt="imagem alternativa"></span>
+      </div>
+      <div class="location-information">
+        <div class="content-info">
+          <h3 class="title-content">IP ADDRESS</h3>
+          <h1 class="result-title">192.212.174.101</h1>
+        </div>
+        <div class="content-info">
+          <h3 class="title-content">Location</h3>
+          <h1 class="result-title">Brooklyn, NY 10001</h1>
+        </div>
+        <div class="content-info">
+          <h3 class="title-content">Timezone</h3>
+          <h1 class="result-title">UTC -05:00</h1>
+        </div>
+        <div class="content-info end">
+          <h3 class="title-content">ISP</h3>
+          <h1 class="result-title">SpaceX Starlink</h1>
+        </div>
+      </div>
+    </section>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

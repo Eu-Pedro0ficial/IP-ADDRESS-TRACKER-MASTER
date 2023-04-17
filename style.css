@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+body main section.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    padding: 10px;
+    height: 400px;
+    width: 100%;
+
+    position: relative;
+
+    background: url(./images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+body main section.header-content h1.title-content{
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: white;
+}
+body main section.header-content div.input-group{
+    display: flex;
+    gap: 0;
+    margin-bottom: 80px;
+}
+body main section.header-content div.input-group input.form-control{
+    width: 450px;
+    height: 60px;
+    padding: 20px;
+
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    outline: 0;
+    border: 0;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+body main section.header-content div.input-group span.input-group-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    /* padding: 20px; */
+    background: black;
+    
+    cursor: pointer;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+body main section.header-content div.input-group span.input-group-text:hover{
+    background-color: hsl(0, 0%, 17%);
+}
+body main section.header-content div.location-information{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -10%;
+
+    width: 80%;
+    height: 35%;
+    padding: 40px;
+
+    border-radius: 15px;
+    background: white;
+    box-shadow: 3px 21px 100px 0px hsla(0, 0%, 59%, 0.363);
+}
+body main section.header-content div.location-information div.content-info{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    
+    width: 500px;
+    
+    padding: 20px;
+    border-right: 2px solid hsla(0, 0%, 59%, 0.323);
+}
+body main section.header-content div.location-information div.content-info.end{
+    border-right: 0;
+}
+body main section.header-content div.location-information div.content-info h3.title-content{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 59%);
+}
+body main section.header-content div.location-information div.content-info h1.result-title{
+    font-weight: 500;
+}
