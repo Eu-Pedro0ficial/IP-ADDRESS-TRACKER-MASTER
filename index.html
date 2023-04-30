@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
   </style>
 </head>
 <body>
@@ -21,33 +21,42 @@
     <section class="header-content">
       <h1 class="title-content">IP Address Tracker</h1>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for any IP address or damain">
-        <span class="input-group-text" id="basic-addon2"><img src="./images/icon-arrow.svg" alt="imagem alternativa"></span>
+        <input id="search-location" type="text" class="form-control" placeholder="Search for any IP address or domain">
+        <span class="input-group-text" id="submit-buttom"><img src="./images/icon-arrow.svg" alt="imagem alternativa"></span>
       </div>
-      <div class="location-information">
-        <div class="content-info">
-          <h3 class="title-content">IP ADDRESS</h3>
-          <h1 class="result-title">192.212.174.101</h1>
-        </div>
-        <div class="content-info">
-          <h3 class="title-content">Location</h3>
-          <h1 class="result-title">Brooklyn, NY 10001</h1>
-        </div>
-        <div class="content-info">
-          <h3 class="title-content">Timezone</h3>
-          <h1 class="result-title">UTC -05:00</h1>
-        </div>
-        <div class="content-info end">
-          <h3 class="title-content">ISP</h3>
-          <h1 class="result-title">SpaceX Starlink</h1>
-        </div>
+    </section>
+    <section class="location-information">
+      <div class="content-info">
+        <h3 class="title-content">IP ADDRESS</h3>
+        <h1 id="ip-address" class="result-title">192.212.174.101</h1>
       </div>
+      <div class="content-info">
+        <h3 class="title-content">Location</h3>
+        <h1 id="location" class="result-title">Brooklyn, NY 10001</h1>
+      </div>
+      <div class="content-info">
+        <h3 class="title-content">Timezone</h3>
+        <h1 id="time-zone" class="result-title">UTC -05:00</h1>
+      </div>
+      <div class="content-info end">
+        <h3 class="title-content">ISP</h3>
+        <h1 id="isp" class="result-title">SpaceX Starlink</h1>
+      </div>
+    </section>
+    <section class="content-map">
+      <div id="map"></div>
     </section>
   </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Pedro Cardoso da Silva</a>.
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.6.1/imask.min.js" integrity="sha512-sDdGivr2tLNeWi/jLYoHWg1CYASC54/Kgl3wqHzBWfPw2tShhl3J4lbxBEeijTeYGhN1zCLcna01yzACiT3gAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script type="module" src="./scrip.js"></script>
 </body>
 </html>

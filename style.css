@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 body{
+    overflow: hidden;
+
     font-family: 'Hanken Grotesk', sans-serif;
     font-family: 'Inter', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Rubik', sans-serif;
+}
+body main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
 }
 body main section.header-content{
     display: flex;
@@ -16,7 +26,6 @@ body main section.header-content{
     flex-direction: column;
     gap: 30px;
 
-    padding: 10px;
     height: 400px;
     width: 100%;
 
@@ -24,25 +33,30 @@ body main section.header-content{
 
     background: url(./images/pattern-bg-desktop.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 2060px;
 }
 
 body main section.header-content h1.title-content{
+    text-align: center;
     font-size: 2.6rem;
     font-weight: 500;
     color: white;
 }
 body main section.header-content div.input-group{
     display: flex;
+    justify-content: center;
     gap: 0;
     margin-bottom: 80px;
+    width: 85%;
 }
 body main section.header-content div.input-group input.form-control{
     width: 450px;
     height: 60px;
     padding: 20px;
 
-    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
     cursor: pointer;
 
     outline: 0;
@@ -55,7 +69,7 @@ body main section.header-content div.input-group span.input-group-text{
     align-items: center;
     justify-content: center;
     width: 60px;
-    /* padding: 20px; */
+
     background: black;
     
     cursor: pointer;
@@ -65,39 +79,101 @@ body main section.header-content div.input-group span.input-group-text{
 body main section.header-content div.input-group span.input-group-text:hover{
     background-color: hsl(0, 0%, 17%);
 }
-body main section.header-content div.location-information{
+body main section.location-information{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     position: absolute;
-    bottom: -10%;
+    z-index: 2;
+    bottom: 53%;
 
     width: 80%;
-    height: 35%;
-    padding: 40px;
+    height: 15%;
+    padding-left: 20px;
+    margin: auto;
 
     border-radius: 15px;
     background: white;
     box-shadow: 3px 21px 100px 0px hsla(0, 0%, 59%, 0.363);
 }
-body main section.header-content div.location-information div.content-info{
+body main section.location-information div.content-info{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
     
-    width: 500px;
+    width: 25%;
     
     padding: 20px;
     border-right: 2px solid hsla(0, 0%, 59%, 0.323);
 }
-body main section.header-content div.location-information div.content-info.end{
+body main section.location-information div.content-info.end{
     border-right: 0;
 }
-body main section.header-content div.location-information div.content-info h3.title-content{
+body main section.location-information div.content-info h3.title-content{
     font-size: 0.9rem;
     font-weight: 700;
     color: hsl(0, 0%, 59%);
 }
-body main section.header-content div.location-information div.content-info h1.result-title{
+body main section.location-information div.content-info h1.result-title{
     font-weight: 500;
+}
+
+body main section.content-map{
+    height: 600px;
+    width: 100%;
+    position: relative;
+}
+body main section.content-map div#map{
+    z-index: 0;
+    height: 100%;
+}
+body footer div.attribution{
+    position: fixed;
+    bottom: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: white;
+    font-size: 11px;
+    text-align: center;
+
+
+}
+body footer div.attribution a{
+    color: hsl(0, 0%, 59%);
+}
+
+@media( max-width: 1000px){
+    body main section.header-content h1.title-content{
+        font-size: 2.4rem;
+    }
+    body main section.header-content div.input-group input.form-control{
+        /* width: 260px; */
+        width: 100%;
+        /* margin-bottom: 90px; */
+    }
+    body main section.location-information{
+        justify-content: center;
+        padding-left: 0;
+        width: 85%;
+        bottom: 50%;
+        height: initial;
+    }
+    body main section.location-information div.content-info{
+        width: 250px;
+        border-right: 0;
+        border-bottom: 2px solid hsla(0, 0%, 59%, 0.323);
+    }
+    body main section.location-information div.content-info.end{
+        border-bottom: 0;
+    }
+}
+@media( max-width: 589px){
+    body main section.header-content{
+        padding-bottom: 70px;
+    }
+    body main section.location-information{
+        bottom: 35%;
+    }
 }
