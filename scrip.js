@@ -83,9 +83,43 @@ function renderingNewLocation(){
     renderMapAndInformation(getValueInField());
 }
 
-document.querySelector('#submit-buttom').addEventListener('click', renderingNewLocation);
+const error = {
+    errorExist: false
+}
+
+function checkForError(){
+    if(error.errorExist){
+        return true;
+    }
+}
+
+searchLocation.addEventListener('input', event => {
+    const pattern = new RegExp('[A-Za-z]');
+    const contentValue = searchLocation.value;
+    
+    if(pattern.test(contentValue)){
+        error.errorExist = true
+    }else{
+        error.errorExist = false
+    }
+    
+});
+document.querySelector('#submit-buttom').addEventListener('click', () => {
+    if(checkForError()){
+        window.alert('Make sure the field has a valid value!');
+        return;
+    }
+
+    renderingNewLocation();
+});
 document.addEventListener('keyup', event =>{
+
     if(event.key === 'Enter'){
+        if(checkForError()){
+            window.alert('Make sure the field has a valid value!');
+            return;
+        }
+        
         renderingNewLocation();
     }
 });
