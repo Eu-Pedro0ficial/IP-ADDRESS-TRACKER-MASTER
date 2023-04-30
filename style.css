@@ -110,7 +110,7 @@ body main section.location-information div.content-info{
 body main section.location-information div.content-info.end{
     border-right: 0;
 }
-body main section.location-information div.content-info h3.title-content{
+body main section.location-information div.content-info h2.title-content{
     font-size: 0.9rem;
     font-weight: 700;
     color: hsl(0, 0%, 59%);
